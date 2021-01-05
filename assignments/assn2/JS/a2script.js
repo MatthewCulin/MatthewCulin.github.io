@@ -124,7 +124,7 @@ window.addEventListener('DOMContentLoaded', () => {
     // FETCH FROM ALTERNATE PAGE
     simpleFetch.addEventListener("click", events =>{
         const xhr = new XMLHttpRequest();
-        xhr.open("GET", "a3new.html");
+        xhr.open("GET", "a2new.html");
         xhr.addEventListener("load", event => {
             if(xhr.status == 200){
                 simpleFetch.parentElement.innerHTML = xhr.response;

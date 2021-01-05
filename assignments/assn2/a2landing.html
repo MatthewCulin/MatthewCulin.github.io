@@ -1,16 +1,41 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
-        <?php 
-                $PAGE_TITLE = "Assignment 3A";
-                include "./PHP/includes/meta.php";
-            ?>
-        <script defer src="JS/a3script.js"></script>
+        <!-- META DATA -->
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <!-- CSS -->
+        <link type="text/css" rel="stylesheet" href="./CSS/reset.css" />
+        <link type="text/css" rel="stylesheet" href="./CSS/default.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <!-- SCRIPTS -->
+        <script defer src="./JS/scripts.js"></script>
+        <script defer src="JS/a2script.js"></script>
+        <!-- PAGE TITLE -->
+        <title>Assignment 2</title>
+        
     </head>
 
     <body>
         <header>
-            <?php include "./PHP/includes/nav.php" ?>
+            <nav class="topnav" id="myTopnav">
+                <!-- HOMEPAGE -->
+                <a href="./index.php" class="active">Home</a>
+    
+                <!-- RESUME/CV-->
+                <a href="./resume.php">Resume/CV</a>
+    
+                <!-- ASSIGNMENTS -->
+                <div class="dropdown">
+                    <button class="dropbtn">Web Development</button>
+                    <div class="dropdown-content">
+                        <a href="./assignments/assn1/a1landing.html">Assignment 1</a>
+                        <a href="./assignments/assn2/a2landing.html">Assignment 2</a>
+                    </div>
+                </div>
+    
+                <a href="javascript:void(0);" style="font-size:15px;" class="icon" onclick="responsiveDropdown()">&#9776;</a>
+            </nav>
             <h1>Fun With JavaScript</h1>
         </header>
         <main>
