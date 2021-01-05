@@ -1,0 +1,744 @@
+:root{
+  --back: #F0FFFF;
+  --mid: #778899;
+  --front: #31343A;
+  --lines: #818181;
+}
+
+@media only screen and (prefers-color-scheme: dark){
+  :root{
+      --back: #31343A;
+      --front: #F0FFFF;
+  }
+}
+
+body {
+  background-color: var(--back);
+  color: var(--front);
+  font-family: Verdana, Tahoma, sans-serif;
+  font-size: 1.5em;
+  margin: auto;
+}
+
+form, ul, th, td, ol{
+  background-color: var(--back);
+  border: 0.1rem solid #000;
+  border-radius: 0.3rem;
+  box-shadow: 0.1rem 0.1rem var(--front);
+  color: var(--front);
+}
+/*----------------------------------------------------------------------------*/
+
+
+
+
+/*------------------------------------------------------------------------------
+|                               NAVIGATION BAR
+|-----------------------------------------------------------------------------*/
+nav {
+  background-color: var(--mid);
+  overflow: hidden;
+}
+
+nav a {
+  color: var(--mid);
+  padding: 0.8rem 1rem; 
+  text-decoration: none;
+}
+
+nav a:hover, .dropdown:hover .dropbtn {
+  background-color: var(--front);
+  color: var(--mid);
+}
+/*----------------------------------------------------------------------------*/
+
+
+
+
+/*------------------------------------------------------------------------------
+|                                  DROP DOWN
+|-----------------------------------------------------------------------------*/
+.topnav {
+  background-color: var(--mid);
+  overflow: hidden;
+}
+
+.topnav a {
+  display: block;
+  color: #F0FFFF;
+  float: left;
+  font-size: 1.0625rem;
+  margin: 0;
+  padding: 0.875rem 1rem;
+  text-align: center;
+  text-decoration: none;
+}
+
+.topnav .icon {
+  display: none;
+}
+
+.dropdown {
+  float: left;
+  overflow: hidden;
+}
+
+.dropdown .dropbtn {
+  background-color: inherit;   
+  border: none;
+  color: #F0FFFF;
+  font-family: inherit;
+  font-size: 1.0625rem; 
+  outline: none;
+  margin: 0;
+  padding: 0.875rem 1rem;
+}
+
+.dropdown-content {
+  box-shadow: 0 0.5rem 1rem 0 rgba(3, 3, 3, 0.2);
+  background-color: #F0FFFF;
+  display: none;
+  min-width: 10rem;
+  position: absolute;
+  z-index: 1;
+}
+
+.dropdown-content a {
+  color: #000;
+  display: block;
+  float: none;
+  padding: 0.875rem 1rem;  
+  text-align: left;
+  text-decoration: none;
+}
+
+.topnav a:hover, .dropdown:hover .dropbtn {
+  background-color: #555;
+  color: #FFF;
+}
+
+.dropdown-content a:hover {
+  background-color: #DDD;
+  color: #000;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+/*----------------------------------------------------------------------------*/
+
+
+
+
+/*------------------------------------------------------------------------------
+|                     RESPONSIVE DESIGN FOR NAVIGATION
+|-----------------------------------------------------------------------------*/
+@media screen and (max-width: 650px) {
+  .topnav a:not(:first-child), .dropdown .dropbtn {
+    display: none;
+  }
+
+  .topnav a.icon {
+    display: block;
+    float: right;
+  }
+
+  .topnav.responsive {
+    position: relative;
+  }
+
+  .topnav.responsive .icon {
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+
+  .topnav.responsive a {
+    display: block;
+    float: none;
+    text-align: left;
+  }
+
+  .topnav.responsive .dropdown {
+    float: none;
+  }
+
+  .topnav.responsive .dropdown-content {
+    position: relative;
+  }
+
+  .topnav.responsive .dropdown .dropbtn {
+    display: block;
+    text-align: left;
+    width: 100%;
+  }
+}
+/*----------------------------------------------------------------------------*/
+
+
+
+
+/*------------------------------------------------------------------------------
+|                               LAYOUT STYLING
+|-----------------------------------------------------------------------------*/
+main{
+  display: flex;
+  flex-direction: column;
+  padding: 0 3rem;
+}
+
+main, footer{
+  margin: 2.5% 5%;
+}
+
+header, footer{
+  border-top: 0.1rem solid var(--mid);
+  text-align: center;
+}
+
+section{
+  margin: 1rem;
+}
+/*----------------------------------------------------------------------------*/
+
+
+
+
+/*------------------------------------------------------------------------------
+|                                LINKS/BUTTONS
+|-----------------------------------------------------------------------------*/
+main a:link{
+  color: var(--front);
+}
+
+main a:hover{
+  color: var(--mid);
+}
+
+main a:visited{
+  color: var(--front);
+}
+
+.buttonLink, .inlineButton{
+  background-color: var(--mid);
+  border: 0.1rem solid var(--mid);
+  border-radius: 0.5rem;
+  color: #F0FFFF;
+  margin: 1rem auto;
+  padding: 1rem;
+  text-align: center;
+  text-decoration: none;
+}
+
+.buttonLink:hover, .inlineButton:hover{
+  background-color: #F0FFFF;
+  border: 0.1rem solid var(--mid);
+  color: var(--mid);
+}
+
+.inlineButton{
+  margin: 0 auto;
+  padding: 0.5rem 1rem;
+  width: auto;
+}
+/*----------------------------------------------------------------------------*/
+
+
+
+
+/*------------------------------------------------------------------------------
+|                                     TEXT
+|-----------------------------------------------------------------------------*/
+p{ 
+  margin: 1rem 0;
+  text-indent: 1rem;
+}
+
+h1{
+  font-size: 2.5rem;
+}
+
+h2{
+  font-size: 2rem;
+}
+
+h3{
+  font-size: 1.75rem;
+}
+
+h4{
+  font-size: 1.25rem;
+}
+
+h5{
+  font-size: 1rem;
+}
+
+h6{
+  font-size: 0.75rem;
+}
+
+h2, h3, h4, h5, h6{
+  text-decoration: underline;
+}
+/*----------------------------------------------------------------------------*/
+
+
+
+
+/*------------------------------------------------------------------------------
+|                                 LISTS
+|-----------------------------------------------------------------------------*/
+ul, ol{
+  background-color: #F0FFFF;
+  box-shadow: none;
+  padding: 2rem 4rem;
+  list-style: circle;
+}
+
+ol{
+  list-style: decimal;
+}
+
+li{
+  color: #31343A;
+  font-size: 1.2rem;
+  padding: 0.5rem 0;
+}
+
+li > a[href]{
+  padding: 0.5rem;
+}
+
+/* THIRD LIST ITEM IN AN UNORDERED LIST WITH P SIBLING STYLING */
+p~ul > li:nth-child(3){
+  list-style:none;
+}
+/*----------------------------------------------------------------------------*/
+
+
+
+
+/*------------------------------------------------------------------------------
+|                               MEDIA STYLING
+|-----------------------------------------------------------------------------*/
+img{
+  display: block;
+  height: 18rem;
+  margin: 0 auto;
+  opacity: .55;                                 
+  padding: 1rem;
+}
+
+img:hover {
+  opacity: 1;
+}
+
+
+iframe, figure{
+  padding: 1rem;
+}
+
+
+figcaption{
+  font-size: 0.75rem;
+  text-align: center;
+}
+
+.video, .images{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+/*----------------------------------------------------------------------------*/
+
+
+
+
+/*------------------------------------------------------------------------------
+|                                   FORMS
+|-----------------------------------------------------------------------------*/
+form{
+  background-color:var(--front);
+  color:var(--back);
+  display: flex;
+  flex-direction: column;
+  font-size: 1.2rem;
+  margin: 1rem auto;
+  padding: 1rem;
+  width: 80%;
+}
+
+form div{
+  padding: 0.75rem 0 0 2rem;
+}
+
+form input[type='submit']{
+  align-self: center;
+  font-size: 1.2rem;
+  margin: 1rem auto 0 auto;
+  padding: 0.3rem;
+  width: 45%;
+}
+/*----------------------------------------------------------------------------*/
+
+
+
+
+/*------------------------------------------------------------------------------
+|                                  TABLES
+|-----------------------------------------------------------------------------*/
+table{
+    border-collapse: separate;
+    border-spacing: 0.5em;
+    margin: 1rem auto;
+}
+
+th, td{
+    text-align: center;
+    padding: 0.5rem;
+    width: 1.5rem;
+    height: 1.5rem;
+    vertical-align: middle;
+}
+
+th{
+    font-weight: bold;
+    font-size: 1.2rem;
+}
+/*----------------------------------------------------------------------------*/
+
+
+
+
+/*------------------------------------------------------------------------------
+|                                  CLASSES
+|-----------------------------------------------------------------------------*/
+.noIn{
+  text-indent: 0;
+}
+
+.griff{
+  color: #660000;
+}
+
+.rav{
+  color:#000066;
+}
+
+.square{
+  background-color: var(--mid);
+  border: 0.15rem solid #000;
+  font-weight: bold;
+}
+
+.errors{
+  color: red;
+  font-style: italic;
+  font-size: 1.1rem;
+}
+
+.correct{
+  color: green;
+}
+
+.incorrect{
+  color: red;
+}
+
+.quizP{
+  margin: 1rem auto;
+}
+
+.hidden{
+  display: none;
+}
+
+.clickable{
+  cursor: pointer;
+}
+
+.boxes{
+  background-color: var(--front);
+  height: 10rem;
+  margin: 1rem;
+  width: 10rem;
+  
+}
+/*----------------------------------------------------------------------------*/
+
+
+
+
+/*------------------------------------------------------------------------------
+|                               SOCIAL MEDIA BUTTONS
+|
+|   https://www.w3schools.com/howto/tryit.asp?filename=tryhow_css_social_media_buttons2
+|-----------------------------------------------------------------------------*/
+.fa:link{
+  color: white;
+  text-decoration: none;
+}
+
+.fa:visited{
+  color: white;
+  text-decoration: none;
+}
+
+.fa {
+  padding: 1.25rem;
+  font-size: 2rem;
+  width: auto;
+  text-align: center;
+  text-decoration: none;
+  margin: 0.3rem 0.125rem;
+  border-radius: 50%;
+}
+
+.fa:hover {
+    opacity: 0.7;
+}
+
+.fa-facebook {
+  background: #3B5998;
+  color: white;
+}
+
+.fa-twitter {
+  background: #55ACEE;
+  color: white;
+}
+
+.fa-google {
+  background: #dd4b39;
+  color: white;
+}
+
+.fa-linkedin {
+  background: #007bb5;
+  color: white;
+}
+
+.fa-instagram {
+  background: #125688;
+  color: white;
+}
+
+.fa-dribbble {
+  background: #ea4c89;
+  color: white;
+}
+/*----------------------------------------------------------------------------*/
+
+
+
+
+/*------------------------------------------------------------------------------
+|-------------------------------------------------------------------------------
+|------------------------------- RESUME STYLING --------------------------------
+|-------------------------------------------------------------------------------
+|-----------------------------------------------------------------------------*/
+
+
+/*------------------------------------------------------------------------------
+|                               RESUME HEADER
+|-----------------------------------------------------------------------------*/
+#resume{
+  font-size: 1rem;
+}
+
+#resume header{
+  align-items: center;
+  border-bottom: 0.1rem solid var(--lines);
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding: 2rem 1rem;
+  text-align: left;
+}
+
+#resume header div:first-child{
+  margin-left: 2rem;
+}
+
+
+#resume header li{
+  border-top: 0.1rem solid var(--lines);
+  color: var(--back);
+  margin: 0 2.5rem;
+}
+
+#resume header li:first-child{
+  border-top: none;
+}
+
+#mail{
+  color: var(--back);
+}
+
+#pad_phone{
+  margin-right: 0.2rem;
+}
+/*----------------------------------------------------------------------------*/
+
+
+/* MAIN SECTION OF RESUME (AFTER HEADER)*/
+header~section{
+  display: flex;
+}
+
+
+/*------------------------------------------------------------------------------
+|                              LEFT SIDE OF RESUME
+|-----------------------------------------------------------------------------*/
+.res_left{
+    flex-direction: column;
+    padding: 1.5rem 2rem;
+    width: 35%;
+}
+
+.res_left>div:nth-child(-n+2){
+    border-bottom: 0.1rem solid var(--lines);
+    margin-bottom: 1rem;
+    padding-bottom: 2rem;
+}
+
+.res_left ul li{
+    padding-bottom: 1rem;
+}
+/*----------------------------------------------------------------------------*/
+
+
+/*------------------------------------------------------------------------------
+|                                 SKILL BAR
+|-----------------------------------------------------------------------------*/
+.skillBar {
+    margin-bottom: 2rem;
+}
+
+.skillBar p {
+    font-weight: bold;
+    font-size: 1rem;
+    margin-bottom: 0.5rem;
+}
+
+.skillBarContainer {
+    background-color: #DDD;
+    border-radius: 0.3rem;
+    height: 0.2rem;
+    max-width: 20rem;
+    overflow: hidden;
+    width: 100%;
+}
+
+.skillBarValue {
+    background-color: var(--lines);
+    height: 0.2rem;
+}
+/*----------------------------------------------------------------------------*/
+
+
+/*------------------------------------------------------------------------------
+|                              SKILL BAR FILLING
+|-----------------------------------------------------------------------------*/
+.value-00 { width: 0; }                         /* 0% FILL */
+.value-10 { width: 10%; }                       /* 10% FILL */
+.value-20 { width: 20%; }                       /* 20% FILL */
+.value-30 { width: 30%; }                       /* 30% FILL */
+.value-40 { width: 40%; }                       /* 40% FILL */
+.value-50 { width: 50%; }                       /* 50% FILL */
+.value-60 { width: 60%; }                       /* 60% FILL */
+.value-70 { width: 70%; }                       /* 70% FILL */
+.value-80 { width: 80%; }                       /* 80% FILL */
+.value-90 { width: 90%; }                       /* 90% FILL */
+.value-100 { width: 100%; }                     /* 100% FILL */
+/*----------------------------------------------------------------------------*/
+
+
+/*------------------------------------------------------------------------------
+|                            RIGHT SIDE OF RESUME
+|-----------------------------------------------------------------------------*/
+.res_right{
+    border-bottom: 0.1rem solid var(--lines);
+    border-left: 0.1rem solid var(--lines); 
+    padding: 1.5rem 2rem;
+}
+
+.res_right:last-of-type{
+    border-bottom: none;
+}
+
+.entry{
+    display: flex;
+    flex-direction: row;
+}
+
+.entry div:first-of-type{
+  padding-right: 0.3rem;
+}
+
+.entry div:last-of-type{
+  padding-left: 0.3rem;
+}
+
+.entry > div:first-child{
+    margin-right: 0;
+    width: 13rem;
+}
+
+.entry > div:last-child{
+    border-left: 0.1rem solid var(--lines);
+    padding-left: 0.6rem;
+    width: 75%;
+}
+/*----------------------------------------------------------------------------*/
+
+
+/*------------------------------------------------------------------------------
+|                           OTHER RESPONSIVE STYLING
+|-----------------------------------------------------------------------------*/
+@media screen and (max-width: 650px) {
+  
+  /*------------------------------------------------------------------------------
+  |                        RESPONSIVE RESUME STYLING
+  |-----------------------------------------------------------------------------*/
+  #resume>section{
+    flex-direction: column;
+  }
+
+  .res_left{
+    margin: 0;
+    padding: 1.5rem 2rem;
+    width: unset;
+  }
+  
+  .res_left{
+    border-bottom: 0.1rem solid var(--lines);
+  }
+
+  .res_left h3~ul{
+    align-content: center;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+  }
+
+  .res_right{
+    border-left: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  
+  /*------------------------------------------------------------------------------
+  |                         RESPONSIVE LIST STYLING (A2Q3)
+  |-----------------------------------------------------------------------------*/
+  ul li ul{
+    padding: 1rem 2rem;
+  }
+
+  ul li ul li{
+    margin: 0;
+  }
+}
+/*----------------------------------------------------------------------------*/

@@ -1,0 +1,30 @@
+main, h3~div{
+    display: flex;
+    flex-direction: column;
+}
+
+h2~div{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    text-indent: 0;
+}
+
+h3~div{
+    text-indent: 0;
+}
+
+h3~div div{
+    margin: 0 auto;
+}
+
+h3~div ul{
+    margin: 1em 0;
+}
+
+@media screen and (max-width: 650px) {
+    h2~div{
+        display: block;
+    }
+
+}

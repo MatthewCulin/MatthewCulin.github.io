@@ -1,0 +1,80 @@
+/*------------------------------------------------------------------------------
+|                       REPETITION REDUCTION IS GREAT
+|-----------------------------------------------------------------------------*/
+.parent {
+  display: flex;                  /* Sets the display to be a flexbox */
+  flex-wrap: nowrap;              /* Stops content from wrapping */
+  justify-content: space-evenly;  /* Spaces out content evenly in flexbox */
+}
+
+/*------------------------------------------------------------------------------
+|                               Question 2a
+|-----------------------------------------------------------------------------*/
+#q3a {
+  align-items: flex-start;        /* Aligns content to the top of the flexbox */
+  flex-direction: row-reverse;    /* Sets orientation to row and reverses content order */
+}
+
+/*------------------------------------------------------------------------------
+|                               Question 2b
+|-----------------------------------------------------------------------------*/
+#q3b {
+  align-items: flex-end;          /* Aligns content to the right of the flexbox */
+  flex-direction: column;         /* Sets orientation to column */
+}
+
+/*------------------------------------------------------------------------------
+|                               Question 2c
+|-----------------------------------------------------------------------------*/
+#q3c{
+  flex-direction: row-reverse;    /* Sets orientation to row and reverses content order */
+  flex-wrap: wrap;                /* Overrides parent flex-wrap property to allow wrapping */
+  
+}
+
+/*------------------------------------------------------------------------------
+|                               Question 2d
+|-----------------------------------------------------------------------------*/
+#q3d {
+  align-items: flex-end;        /* Aligns content to the bottom of the flexbox */
+  flex-direction: row;          /* Sets orientation to row */
+  justify-content: flex-start;  /* Sets content to compress to starting side of the flexbox */
+}
+
+/* Selects the elements with id=3qd and class=special*/
+#q3d .special {
+  align-self:center;           /* Aligns content in the center of the flexbox */
+}
+
+/* Selects the last 2 elements with id=q3d and class=special */
+#q3d .special:nth-child(4) {
+  flex-grow: 1;                 /* Stretches content to fill empty lateral space in the flexbox */
+}
+
+/*------------------------------------------------------------------------------
+|                               Question 2e
+|-----------------------------------------------------------------------------*/
+#q3e {
+  flex-direction: row;          /* Sets orientation to row */
+  align-items: flex-end;        /* Aligns content to the bottom of the flexbox */
+  justify-content: flex-start;  /* Sets content to compress to starting side of the flexbox */
+}
+
+/* Selects the 2nd element with id=3qe and class=special*/
+#q3e .special:nth-child(2) {
+  align-self: flex-start;       /* Aligns content to the top of the flexbox */
+  order: -1;                    /* Shifts the ordering to be the first element*/
+}
+
+/* Selects the 3rd element with id=3qe*/
+#q3e :nth-child(3) {
+  align-self: flex-start;       /* Aligns content to the top of the flexbox */
+  margin-left: auto;            /* Gives the content a margin on the left side to shift down the page */ 
+  order: 1;                     /* Shifts the ordering to be the last element */    
+}
+
+/* Selects the 5th element with id=3qe and class=special*/
+#q3e .special:nth-child(5) {
+  align-self: stretch;          /* Aligns content to the stretch to the height of the flexbox */
+  order: 1;                     /* Shifts the ordering to be the last element */
+}

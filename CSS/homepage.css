@@ -1,0 +1,148 @@
+/*------------------------------------------------------------------------------
+|                         GENERAL STYLING
+|-----------------------------------------------------------------------------*/
+
+*{
+  box-sizing: border-box;
+}
+
+body{
+  margin-top: 2.5%;
+  margin-left: 5%;
+  margin-right: 5%;
+
+  background-color: #D1F2EB;
+
+  font-family: verdana, arial, sans-serif;
+  color: black;
+  font-size: 16;
+}
+
+/*------------------------------------------------------------------------------
+|                                 LINK STYLING
+|-----------------------------------------------------------------------------*/
+
+a:link{
+  color: blue;
+  text-decoration: none;
+}
+
+a:visited{
+  color: blue;
+  text-decoration: none;
+}
+
+a:hover{
+  color: navy;
+  text-decoration: underline;
+}
+
+/*------------------------------------------------------------------------------
+|                               IMAGE STYLING
+|-----------------------------------------------------------------------------*/
+
+img{
+  width: 75%;
+  float: none;
+  align-items: center;
+}
+
+figcaption{
+  font-size: 0.75em;
+  font-family: courier;
+}
+
+/* -----------------------------------------------------------------------------
+|
+|                            STYLING FOR SIDEBAR
+|
+|    https://www.w3schools.com/howto/howto_js_dropdown_sidenav.asp
+|-----------------------------------------------------------------------------*/
+
+/* Sidebar set to fixed position on left side, full height of screen */
+.sidenav {
+  height: 100%;
+  width: 12.5em;
+
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: #111111;
+  overflow-x: hidden;
+  padding-top: 1.2em;
+}
+
+/* Sidebar links and dropdown button styling */
+.sidenav a, .dropdown-btn {
+  padding: 0.375em 0.5em 0.375em 1em;
+  text-decoration: none;
+  font-size: 1.2em;
+  color: #818181;
+  display: block;
+  border: none;
+  background: none;
+  width: 100%;
+  text-align: left;
+  cursor: pointer;
+  outline: none;
+}
+
+/* Sidebar links and dropdown button hover styling */
+.sidenav a:hover, .dropdown-btn:hover {
+  color: #818181;
+}
+
+/* Change the colouring for the dropdown buttons when clicked */
+.active {
+  background-color: #D1F2EB;
+  color: black;
+}
+
+/* Set each item in the dropdown menu to hidden inititaly */
+.dropdown-container {
+  display: none;
+  background-color: #262626;
+  padding-left: 0.5em;
+}
+
+/*------------------------------------------------------------------------------
+|                         MAIN CONTENT STYLING
+|-----------------------------------------------------------------------------*/
+
+.main {
+  margin-left: 12.5em;  /* Same as width of sidebar */
+  font-size: 1em;
+  padding: 0em 0.6em;
+}
+
+.message{
+  text-indent: 1em;
+}
+
+header{
+  text-align: center;
+  border-bottom-color: #818181;
+  border-bottom-style: solid;
+}
+
+footer{
+  text-align: center;
+  border-top-color: #818181;
+  border-top-style: solid;
+  margin-top: 1em;
+}
+
+/*------------------------------------------------------------------------------
+|                          MOBILE STYLING
+|-----------------------------------------------------------------------------*/
+
+/* Some media queries for responsiveness */
+@media only screen and (max-height: 450px) {
+  .sidenav {
+    padding-top: 1em;
+  }
+  .sidenav a {
+    font-size: 1.1em;
+  }
+}
