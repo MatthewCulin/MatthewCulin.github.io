@@ -1,17 +1,43 @@
 <!DOCTYPE HTML>
 <html lang="en">
 
-<head>
-    <?php 
-        $PAGE_TITLE = "Welcome!";
-        include "./PHP/includes/meta.php";
-    ?>
+    <head>
+        <!-- META DATA -->
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <!-- CSS -->
+        <link type="text/css" rel="stylesheet" href="./CSS/reset.css" />
+        <link type="text/css" rel="stylesheet" href="./CSS/default.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <!-- SCRIPTS -->
+        <script defer src="./JS/scripts.js"></script>
+        <!-- PAGE TITLE -->
+        <title>Welcome</title>
     </head>
 
     <body>
         <!-- HEADER -->
         <header>
-            <?php include "./PHP/includes/nav.php" ?>
+            <nav class="topnav" id="myTopnav">
+                <!-- HOMEPAGE -->
+                <a href="./index.php" class="active">Home</a>
+            
+                <!-- RESUME/CV-->
+                <a href="./resume.php">Resume/CV</a>
+            
+                <!-- ASSIGNMENTS -->
+                <div class="dropdown">
+                    <button class="dropbtn">Assignment</button>
+                    <div class="dropdown-content">
+                        <a href="./assignments/assn1/a1landing.php">Assignment 1</a>
+                        <a href="./assignments/assn2/a2landing.php">Assignment 2</a>
+                        <a href="./assignments/assn3/a3landing.php">Assignment 3</a>
+                    </div>
+                </div>
+            
+                <a href="javascript:void(0);" style="font-size:15px;" class="icon" onclick="responsiveDropdown()">&#9776;</a>
+            
+            </nav>
             <h1>Welcome!</h1>
         </header>
 
@@ -65,7 +91,15 @@
         </main>
 
       <!-- FOOTER -->
-      <?php include "./PHP/includes/footer.php" ?>
+      <footer>
+        <p>Links to My Social Media</p>
+        <div>
+            <a class="fa fa-instagram" href="https://www.instagram.com/mattculin/"></a>
+            <a class="fa fa-google" href="https://aboutme.google.com/u/0/?referer=gplus"></a>
+            <a class="fa fa-linkedin" href="https://www.linkedin.com/in/matthew-culin-207950139/"></a>
+        </div>
+        <p>&copy;This page is copy-write protected and cannot be redistributed without the written consent of the owner of this website </p>
+    </footer>
 
   </body>
 
